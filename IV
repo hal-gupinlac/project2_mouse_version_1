@@ -1,0 +1,24 @@
+//To draw and do some stuff
+
+//Beg...bg blck
+void setup(){
+  size(500,500);
+  background(0);
+}
+
+//ink red and prpl
+void draw(){
+  stroke(255,0,0);
+  line(mouseX,mouseY,pmouseX,pmouseY);
+  
+  if(keyPressed==true){
+    stroke(0,0,255);
+    line(mouseX,mouseY,pmouseX,pmouseY);
+ }}
+
+//End...bg end pnk
+void mousePressed(){
+  background(209,184,214);
+}
+
+
