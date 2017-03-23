@@ -1,0 +1,8 @@
+void setup(){
+  background(209,184,214);
+}
+
+void draw(){
+  background(209,184,214);
+  line(mouseX,mouseY,pmouseX,pmouseY);
+}
