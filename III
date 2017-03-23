@@ -4,13 +4,20 @@ void setup(){
   background(209,184,214);
 }
 
-//To make a line
+//To make a line (red)
 void draw(){
   background(209,184,214);
   line(mouseX,mouseY,pmouseX,pmouseY);
 }
 
+//To make a line (white)
+void keyPressed(){
+  stroke(255);
+  line(mouseX,mouseY,pmouseX,pmouseY);
+
 //To erase
 void mousePressed(){
   background(209,184,214);
 }
+
+
