@@ -1,8 +1,16 @@
+//To draw and erase
+
 void setup(){
   background(209,184,214);
 }
 
+//To make a line
 void draw(){
   background(209,184,214);
   line(mouseX,mouseY,pmouseX,pmouseY);
+}
+
+//To erase
+void mousePressed(){
+  background(209,184,214);
 }
