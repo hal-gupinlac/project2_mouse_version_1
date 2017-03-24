@@ -1,24 +1,31 @@
 //To draw and do some stuff
 
-//Beg...bg blck
+//default black background
 void setup(){
   size(500,500);
   background(0);
 }
 
-//ink red and prpl
+//ink
 void draw(){
+  //red
   stroke(255,0,0);
   line(mouseX,mouseY,pmouseX,pmouseY);
   
+  //blue but it looks purple for who knows what reason
   if(keyPressed==true){
     stroke(0,0,255);
     line(mouseX,mouseY,pmouseX,pmouseY);
- }}
+    }}
 
-//End...bg end pnk
+//click mouse for pink background.."erase"       
 void mousePressed(){
   background(209,184,214);
+
+  //hold key and mouse click for black background
+  if(keyPressed==true){
+    background(0);
+  }
 }
 
 
