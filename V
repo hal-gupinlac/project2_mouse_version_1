@@ -12,12 +12,12 @@ void draw(){
   stroke(255,0,0);
   line(mouseX,mouseY,pmouseX,pmouseY);
   
-  //hold key for blue
+  //hold 'b' for a blue that really looks like purple for some reason
   if(key=='b'){
     stroke(0,0,255);
     line(mouseX,mouseY,pmouseX,pmouseY);
   }
-    //hold mouse then hold key for white that looks like blueberry yogurt
+  //hold 'w' for white that actually looks more like blueberry yogurt
   if(key=='w'){
    stroke(255);
    line(mouseX,mouseY,pmouseX,pmouseY);
@@ -25,11 +25,11 @@ void draw(){
    
 }
 
-//click mouse for blue background.."erase"       
+//click mouse for clear blue background      
 void mousePressed(){
   background(150,255,255);
 
-  //hold key and mouse click for black background
+  //hold key and mouse click for clear black background
   if(keyPressed==true){
       background(0);
   }
