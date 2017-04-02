@@ -2,7 +2,7 @@
 
 //default black background
 void setup(){
-  size(500,500);
+  size(1000,1000);
   background(0);
 }
 
@@ -13,25 +13,47 @@ void draw(){
   line(mouseX,mouseY,pmouseX,pmouseY);
   
   //hold key for blue
-  if(keyPressed==true){
+  if(key=='b'){
     stroke(0,0,255);
     line(mouseX,mouseY,pmouseX,pmouseY);
-    
-  //hold mouse then hold key for white that looks like blueberry yogurt
-  if(mousePressed){
+  }
+    //hold mouse then hold key for white that looks like blueberry yogurt
+  if(key=='w'){
    stroke(255);
    line(mouseX,mouseY,pmouseX,pmouseY);
+  }
    
-  }}
+}
 
-//click mouse for pink background.."erase"       
+//click mouse for blue background.."erase"       
 void mousePressed(){
-  background(209,184,214);
+  background(150,255,255);
 
   //hold key and mouse click for black background
   if(keyPressed==true){
-    background(0);
+      background(0);
   }
+  
+  //hold 'e' key and click for a surprised boiled egg and clear background
+  if(key=='e'){
+    //whites
+    fill(255);
+    ellipse(500,500,300,300);
+    
+    //yolk
+    fill(249,281,42);
+    ellipse(500,500,150,150);
+    
+    //eyes
+    fill(0);
+    ellipse(470,470,20,35);
+    fill(0);
+    ellipse(530,470,20,35);
+    
+    //mouth
+    fill(0);
+    ellipse(500,530,75,50);
+  }
+  
+
 }
-
-
