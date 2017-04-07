@@ -1,0 +1,106 @@
+//To draw and do some stuff
+
+//default black background
+void setup(){
+  size(1000,1000);
+  background(0);
+}
+
+//ink
+void draw(){
+ 
+  //test letters
+  textSize(30);
+  fill(255);
+  text("test",10,40);
+  
+  //tryna figure the boundaries for "test"
+  stroke(255);
+  noFill();
+  rect(8,8,77,40);
+
+  //tap 'r' for red ink
+  if(key=='r'){
+  stroke(255,0,0);
+  line(mouseX,mouseY,pmouseX,pmouseY);
+  }
+  
+  //tap 'b' for a blue that really looks like purple for some reason
+  if(key=='b'){
+    stroke(0,0,255);
+    line(mouseX,mouseY,pmouseX,pmouseY);
+  }
+  //tap 'w' for white that actually looks more like blueberry yogurt
+  if(key=='w'){
+   stroke(255);
+   line(mouseX,mouseY,pmouseX,pmouseY);
+  }
+  
+  //
+  if(key=='n'){
+    noStroke();
+    line(mouseX,mouseY,pmouseX,pmouseY);
+  }
+  
+  //test textbox...not working
+  
+    if(mouseX>=8){
+        if(mouseX<=85){
+          if(mouseY>=8){
+            if(mouseY<=32){
+               textSize(25);
+               fill(255);
+               text("Test info", 500,500);
+            }}}}
+}
+
+//click mouse for clear orange background      
+void mousePressed(){
+  background(255,155,5);
+
+  //hold key and mouse click for clear black background
+  if(keyPressed==true){
+      background(0);
+  }
+  
+  //hold 'e' key and click for a surprised boiled egg and clear background...click again for orange background
+  if(key=='e'){
+    //whites
+    fill(255);
+    ellipse(500,500,300,300);
+    
+    //yolk
+    fill(249,281,42);
+    ellipse(500,500,150,150);
+    
+    //eyes
+    fill(0);
+    ellipse(470,470,20,35);
+    fill(0);
+    ellipse(530,470,20,35);
+    
+    //mouth
+    fill(0);
+    ellipse(500,530,75,50);
+  }
+  
+  //sticker with no line (ink) but changes place every time you click again
+  if(key=='s'){
+    fill(63,252,189);
+    ellipse(mouseX,mouseY,30,30);
+  }
+}
+
+void mouseDragged(){
+    
+    //test words show if cursor goes over box...doesn't go away
+    if(mouseX>=8){
+      if(mouseX<=85){
+        if(mouseY>=8){
+          if(mouseY<=32){
+            stroke(0,255,0);
+            line(mouseX,mouseY,pmouseX,pmouseY);
+          }}}}
+}
+
+
