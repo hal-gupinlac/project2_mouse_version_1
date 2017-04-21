@@ -48,7 +48,7 @@ void draw(){
     ellipse(145,90,30,30);
 }
 
-//click buttons to change colors
+//test if clicking buttons works if i click bg colors
 void mousePressed(){
   //change background
     if(mouseX>140)
@@ -70,4 +70,35 @@ void mousePressed(){
     if(mouseY<50){
       background(0);//black
   }
+ 
+  //change ink...not working
+    //red
+    if(mouseX>35)
+    if(mouseY>60)
+    if(mouseX<95)
+    if(mouseY<120){
+      stroke(255,0,0);
+      line(mouseX,mouseY,pmouseX,pmouseY);
+    }
+    
+    //blue
+    if(mouseX>75)
+    if(mouseY>60)
+    if(mouseX<135)
+    if(mouseY<120){
+      stroke(255,0,0);
+      line(mouseX,mouseY,pmouseX,pmouseY);
+    }
+    
+    //white
+    if(mouseX>115)
+    if(mouseY>60)
+    if(mouseX<175)
+    if(mouseY<120){
+      stroke(255,0,0);
+      line(mouseX,mouseY,pmouseX,pmouseY);
+    }
 }
+
+
+
