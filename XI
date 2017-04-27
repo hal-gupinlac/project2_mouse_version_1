@@ -1,5 +1,10 @@
 //To draw and do some stuff
 
+int s=1;
+int r=0;
+int g=0;
+int b=0;
+
 //default black background
 void setup(){
   size(1000,1000);
@@ -14,16 +19,19 @@ void draw(){
   text("background:",10,40);
  
     //button dabbed
+    strokeWeight(1);
     stroke(255);
     fill(218,187,237);
     rect(140,20,30,30);
     
     //button edbeaf
+    strokeWeight(1);
     stroke(255);
     fill(237,190,175);
     rect(180,20,30,30);
     
     //button black
+    strokeWeight(1);
     stroke(255);
     fill(0);
     rect(220,20,30,30);
@@ -46,59 +54,95 @@ void draw(){
     stroke(0);
     fill(255);
     ellipse(145,90,30,30);
-}
+    
+    //eraser icon
+    stroke(255);
+    fill(239,162,230);
+    rect(9,135,60,30);
+  
+      textSize(20);
+      fill(255);
+      text("eraser",10,155);
+    
+//change ink color
+  if(mousePressed){
+      strokeWeight(s);
+      stroke(r,g,b);
+      line(mouseX,mouseY,pmouseX,pmouseY);
+  }
+} 
 
-//test if clicking buttons works if i click bg colors
+
 void mousePressed(){
   //change background
-    if(mouseX>140)
-    if(mouseY>20)
-    if(mouseX<170)
-    if(mouseY<50){
-      background(218,187,237); //dabbed
+  
+    //dabbed  
+      if(mouseX>140)
+      if(mouseY>20)
+      if(mouseX<170)
+      if(mouseY<50){
+        background(218,187,237); 
     }
-      
-    if(mouseX>180)
-    if(mouseY>20)
-    if(mouseX<210)
-    if(mouseY<50){
-      background(237,190,175); //edbeaf
-    }  
-    if(mouseX>220)
-    if(mouseY>20)
-    if(mouseX<250)
-    if(mouseY<50){
-      background(0);//black
-  }
+    
+    //edbeaf
+      if(mouseX>180)
+      if(mouseY>20)
+      if(mouseX<210)
+      if(mouseY<50){
+        background(237,190,175);
+    } 
+    
+    //black
+      if(mouseX>220)
+      if(mouseY>20)
+      if(mouseX<250)
+      if(mouseY<50){
+        background(0);
+    }
  
-  //change ink...not working
+//change ink
     //red
-    if(mouseX>35)
-    if(mouseY>60)
-    if(mouseX<95)
-    if(mouseY<120){
-      stroke(255,0,0);
-      line(mouseX,mouseY,pmouseX,pmouseY);
+      if(mouseX>50)
+      if(mouseY>75)
+      if(mouseX<80)
+      if(mouseY<105){
+        s=1;
+        r=255;
+        g=0;
+        b=0;
     }
     
     //blue
-    if(mouseX>75)
-    if(mouseY>60)
-    if(mouseX<135)
-    if(mouseY<120){
-      stroke(255,0,0);
-      line(mouseX,mouseY,pmouseX,pmouseY);
+      if(mouseX>90)
+      if(mouseY>75)
+      if(mouseX<120)
+      if(mouseY<105){
+        s=1;
+        r=0;
+        g=0;
+        b=255;
     }
     
     //white
-    if(mouseX>115)
-    if(mouseY>60)
-    if(mouseX<175)
-    if(mouseY<120){
-      stroke(255,0,0);
-      line(mouseX,mouseY,pmouseX,pmouseY);
+      if(mouseX>130)
+      if(mouseY>75)
+      if(mouseX<160)
+      if(mouseY<105){
+        s=1;
+        r=255;
+        g=255;
+        b=255;
     }
+    
+    //eraser..try making it match background color...currently only for black
+      if(mouseX>9)
+      if(mouseY>135)
+      if(mouseX<69)
+      if(mouseY<165){
+         s=20;
+         r=0;
+         g=0;
+         b=0;
+      }
+        
 }
-
-
-
