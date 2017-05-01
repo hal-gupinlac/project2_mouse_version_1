@@ -70,6 +70,47 @@ void draw(){
       stroke(r,g,b);
       line(mouseX,mouseY,pmouseX,pmouseY);
   }
+  
+  //sticker
+    textSize(20);
+    fill(255);
+    text("stickers:",10,210);
+    
+     //sticker types
+     
+       //heart
+       noStroke();
+       fill(244,212,66);
+       ellipse(110,198,15,15);
+       noStroke();
+       fill(244,212,66);
+       ellipse(124,198,15,15);
+       noStroke();
+       fill(244,212,66);
+       ellipse(118,208,10,10);
+       noStroke();
+       fill(244,212,66);
+       rect(110,205,16,3);
+       noStroke();
+       fill(244,212,66);
+       rect(112,208,12,3);
+       
+       //clover
+       noStroke();
+       fill(86,244,66);
+       ellipse(155,198,15,15);
+       noStroke();
+       fill(86,244,66);
+       ellipse(170,198,15,15);
+       noStroke();
+       fill(86,244,66);
+       ellipse(155,213,15,15);
+       noStroke();
+       fill(86,244,66);
+       ellipse(170,213,15,15);
+} 
+
+  
 } 
 
 
@@ -143,6 +184,18 @@ void mousePressed(){
          r=0;
          g=0;
          b=0;
+      }
+      
+      //stickers...figure something...another if?
+    
+      //heart
+      if(mouseX>95)
+      if(mouseY>95)
+      if(mouseX<139)
+      if(mouseY<218){
+        //test if button working...not working
+        stroke(244,214,66);
+        line(mouseX,mouseY,pmouseX,pmouseY);
       }
         
 }
