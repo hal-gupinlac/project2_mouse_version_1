@@ -93,7 +93,31 @@ void draw(){
        rect(110,205,16,3);
        noStroke();
        fill(244,212,66);
-       rect(112,208,12,3);
+       rect(112,208,12,3); 
+       
+        //show heart
+           if(mousePressed)
+           if(mouseX>102)
+           if(mouseY>132)
+           if(mouseX<190)
+           if(mouseY<213){
+             background(0);
+             noStroke();
+             fill(244,212,66);
+             ellipse(310,398,15,15);
+             noStroke();
+             fill(244,212,66);
+             ellipse(324,398,15,15);
+             noStroke();
+             fill(244,212,66);
+             ellipse(318,408,10,10);
+             noStroke();
+             fill(244,212,66);
+             rect(310,405,16,3);
+             noStroke();
+             fill(244,212,66);
+             rect(312,408,12,3);
+            }
        
        //clover
        noStroke();
@@ -108,7 +132,27 @@ void draw(){
        noStroke();
        fill(86,244,66);
        ellipse(170,213,15,15);
-} 
+       
+         //show clover
+          if(mousePressed)
+          if(mouseX>147)
+          if(mouseY>190)
+          if(mouseX<178)
+          if(mouseY<221){
+             background(0);
+             noStroke();
+             fill(86,244,66);
+             ellipse(455,498,15,15);
+             noStroke();
+             fill(86,244,66);
+             ellipse(470,498,15,15);
+             noStroke();
+             fill(86,244,66);
+             ellipse(455,513,15,15);
+             noStroke();
+             fill(86,244,66);
+             ellipse(470,513,15,15);
+          }
 
   
 } 
@@ -185,17 +229,5 @@ void mousePressed(){
          g=0;
          b=0;
       }
-      
-      //stickers...figure something...another if?
-    
-      //heart
-      if(mouseX>95)
-      if(mouseY>95)
-      if(mouseX<139)
-      if(mouseY<218){
-        //test if button working...not working
-        stroke(244,214,66);
-        line(mouseX,mouseY,pmouseX,pmouseY);
-      }
-        
+  
 }
